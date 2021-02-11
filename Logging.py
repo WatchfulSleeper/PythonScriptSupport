@@ -9,7 +9,7 @@ def logging(severity, Messange):
     currentDate = datetime.datetime.today().strftime ('%Y-%m-%d')
     currentTime = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S,%f')
     if not directoryExist:
-        Path.mkdir('Logs')
+        Path.mkdir(workdir / 'Logs')
     logFileName = currentDate + '-daily-log.log'
     fileExist = Path.exists(workdir / 'Logs' / logFileName)
     if severity == 1:
